@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block content %}
+{% block css %}
+
+<style>
+    
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    p{
+        position: absolute;
+        left: 50%;
+        top: 45%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        font-family: Pacifico, Calibri;
+        font-size: 2em;
+        
+        
+    }
+    h2{
+        position: absolute;
+        left: 50%;
+        top: 25%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        font-family: Pacifico, Calibri;
+        font-size:3em;
+        
+    }
+    </style>
+    {% endblock %}
+<h2 align=center style="color:blue;"><br>RESULT</h2>
+
+<p align=center ><br>We Just Analysed The Url Entered By You And After The Analysis Here Is The Result. <br><br>{{url}}<br>{{pre}}</br></p>
+
+{% endblock %}

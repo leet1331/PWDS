@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 align=center style="color:black;"><br>Analysis Table</h2>
+
+    <div class="row">
+        <div class="col-md-12">
+                <table class="table table-bordered table-striped" style="margin-top: 40px">
+                        
+                        <tr>
+                            <th>Task</th>
+                            <th>status</th>-
+                        </tr>
+                        <tr>
+                            <td>domain</td>
+                            <td>{{sd}}</td>
+                        </tr>
+                        <tr>
+                            <td>typesquatting</td>
+                            <td>{{ts}}</td>
+                        </tr>
+                        
+                        <tr>
+                            <td>subdomain</td>
+                            <td>{{sdom}}<td>
+                            
+                        </tr>
+                        <tr>
+                            <td>ip address</td>
+                            <td style="color:black">{{ip}}</td>
+                        </tr>
+                        <tr>
+                            <td>popular
+                            </td>
+                            <td>{{pop}}</td>
+                        </tr>
+                    </table>
+                <form action='/response' method="POST">
+                    <!-- <button class="btn btn-danger btn-lg" type="submit" style="margin-left:450px;" >More Information</button>  -->
+                    <a class="btn btn-danger btn-lg" href="/response?url={{url}}" style="margin-left:450px;">More Information</a>  
+                </form>
+        </div>
+</div>
+{% endblock %}
